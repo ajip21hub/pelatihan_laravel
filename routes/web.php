@@ -1,34 +1,21 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tentang', function () {
-    return view('tentang');
-})->name('tentang');
+// Route untuk Login
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
-Route::get('/user/{id}', function ($id) {
-    return 'user id '.$id;
-});
-
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', function () {
-        return 'Halaman Admin';
-    });
-
-    Route::get('/user', function () {
-        return 'Halaman User Admin';
-    });
-
-    Route::get('/produk', function () {
-        return 'Halaman Produk Admin';
-    });
-});
+// ROute untuk handle login
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 
-Route::get('/produk/{id}', function ($id) {
-    return 'Halaman Produk dengan ID '.$id;
-})->where('id', '[0-9]+');
+// Route Nampilin Data Login
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');

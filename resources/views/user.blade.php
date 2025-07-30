@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User}</title>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>Email : {{ $email }}</p>
+    
+    <h1> Jumlahnya : {{ $jumlah}}</h1>
 </body>
 </html>
