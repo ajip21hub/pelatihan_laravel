@@ -8,9 +8,14 @@
         <title>App Name - @yield('title')</title>
     </head>
     <body>
-        {{-- @section('sidebar') This is the master sidebar. @show --}}
+ 
         <div class="container">
             @yield('content')
         </div>
+        <footer class="bg-light text-center py-4">
+            <p>
+               @yield('footer')
+            </p>
+        </footer>
     </body>
 </html>

@@ -22,3 +22,11 @@ Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
 
 // Route untuk Signup (Show Form)
 Route::get('/signup', [SignupController::class, 'show'])->name('signup.show');
+
+// Route untuk Signup (Handle POST)
+Route::post('/signup', [SignupController::class, 'processSignup'])->name('signup.process');
+
+// Route untuk edit user
+Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+// Route untuk update user
+Route::post('/user/{id}/update', [UserController::class, 'update'])->name('user.update');
