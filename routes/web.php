@@ -32,3 +32,12 @@ Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit'
 Route::post('/user/{id}/update', [UserController::class, 'update'])->name('user.update');
 // Route untuk hapus user
 Route::post('/user/{id}/delete', [UserController::class, 'destroy'])->name('user.destroy');
+
+// Buku Tamu
+Route::get('/buku-tamu', [App\Http\Controllers\TamuController::class, 'create'])->name('tamu.create');
+Route::post('/buku-tamu', [App\Http\Controllers\TamuController::class, 'store'])->name('tamu.store');
+Route::get('/buku-tamu/list', [App\Http\Controllers\TamuController::class, 'index'])->name('tamu.index');
+Route::get('/buku-tamu/{id}', [App\Http\Controllers\TamuController::class, 'show'])->name('tamu.show');
+Route::get('/buku-tamu/{id}/edit', [App\Http\Controllers\TamuController::class, 'edit'])->name('tamu.edit');
+Route::put('/buku-tamu/{id}', [App\Http\Controllers\TamuController::class, 'update'])->name('tamu.update');
+Route::delete('/buku-tamu/{id}', [App\Http\Controllers\TamuController::class, 'destroy'])->name('tamu.destroy');
