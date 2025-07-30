@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>Email : {{ $email }}</p>
 
+@extends('layouts.app')
+
+@section('title', 'Welcome Page')
+@section('content')
+    <p>Email : {{ $email }}</p>
     <table class="table m-3">
         <thead>
             <tr>
@@ -22,13 +16,9 @@
             <tr>
                 <td>{{ $i + 1 }}</td>
             </tr>
-            
-
         @endfor
             {{-- @endforeach --}}
         </tbody>
        
     </table>
-       
-</body>
-</html>
+@endsection
