@@ -30,3 +30,5 @@ Route::post('/signup', [SignupController::class, 'processSignup'])->name('signup
 Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
 // Route untuk update user
 Route::post('/user/{id}/update', [UserController::class, 'update'])->name('user.update');
+// Route untuk hapus user
+Route::post('/user/{id}/delete', [UserController::class, 'destroy'])->name('user.destroy');

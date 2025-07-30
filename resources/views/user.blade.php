@@ -24,8 +24,14 @@
                     @endisset
                 </div>
             </div>
-           
-        </div>
+
+            <div class="text-center">
+                <a href="{{ route('user.edit', ['id' => $id]) }}" class="btn btn-primary">Edit Profil</a>
+                <form action="{{ route('user.destroy', ['id' => $id]) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus akun ini?');">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Hapus Akun</button>
+                </form>
+            </div>
     @endsection
 
     @section('footer')
