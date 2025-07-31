@@ -6,6 +6,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css">
+        @livewireStyles
         <style>
             body {
                 background: #f7f7f7;
@@ -54,5 +55,6 @@
                @yield('footer')
             </p>
         </footer>
+        @livewireScripts
     </body>
 </html>
