@@ -10,6 +10,7 @@ class LoginController extends Controller
     {
 
         $email = $request->email;
+        // wtesdsadsad
 
         return view('welcome', compact('email'));
 
