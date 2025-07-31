@@ -45,8 +45,8 @@
         <title>App Name - @yield('title')</title>
     </head>
     <body>
- 
-        <div class="container">
+
+        <div class="container mt-5 mb-5 py-4">
             @yield('content')
         </div>
         <footer class="bg-light text-center py-4">

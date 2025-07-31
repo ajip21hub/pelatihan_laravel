@@ -41,3 +41,6 @@ Route::get('/buku-tamu/{id}', [App\Http\Controllers\TamuController::class, 'show
 Route::get('/buku-tamu/{id}/edit', [App\Http\Controllers\TamuController::class, 'edit'])->name('tamu.edit');
 Route::put('/buku-tamu/{id}', [App\Http\Controllers\TamuController::class, 'update'])->name('tamu.update');
 Route::delete('/buku-tamu/{id}', [App\Http\Controllers\TamuController::class, 'destroy'])->name('tamu.destroy');
+
+// siswa routes
+Route::resource('siswa', App\Http\Controllers\SiswaController::class);
